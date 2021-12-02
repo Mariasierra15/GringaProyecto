@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gringa-Login</title>
+  <link rel="icon" href="img/handbag.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/login.css">
+
+  <style>
+    .bg {
+      background-image: url(img/login/bg1.jpg);
+      background-position: center;
+    }
+    body{
+      background-color: #fdf1ec;
+
+    }
+  </style>
+
+</head>
+
+
+
+<body>
+  <div class="container w-75 mt-5 rounded shadow bg-white">
+    <div class="row align-items-stretch">
+      <div class="col bg d-none d-lg-block col-md-5 col-lg-5 col-xl-6 rounded"></div>
+      <div class="col p-5">
+        <div class="text-end">
+          
+
+          <a title="" href="index.html"><img class="mb-5" src="img/login/Logo Insta.png" width="100" alt="" /></a>
+
+        </div>
+        <h2 class="py-4 rounded-end">Bienvenido</h2>
+
+        <form action="#">
+          <div class="mb-4">
+            <label for="email" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" name="email">
+          </div>
+          <div class="mb-4">
+            <label for="password" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" name="password">
+          </div>
+          <div class="mb-4 form-check">
+            <input type="checkbox" name="connected" class="form-check-input">
+            <label for="connected" class="form-check-label">Recordarme</label>
+          </div>
+
+          <div class="d-grid">
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          </div>
+
+          <div class="my-3">
+            <span><a data-bs-toggle="modal" href="#modalMail">Recuperar contraseña</a></span><br>
+            <span>No estas registrado? <a data-bs-toggle="modal" href="#modaregitro">Registrarme</a></span>
+          </div>
+        </form>
+
+        <div class="container w-100 my-5">
+          <div class="row text-center">
+            <div class="col-12">Iniciar Sesión</div>
+          </div>
+          <div class="row">
+            <div class="col">
+              <button class="btn btn-outline-primary w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2 d-none d-md-block">
+                    <img src="./img/login/fb.png" width="30" alt="">
+                  </div>
+                  <div class="col-12 col-md-8 text-center">
+                    Facebook
+                  </div>
+                </div>
+
+              </button>
+            </div>
+            <div class="col">
+              <button class="btn btn-outline-danger w-100 my-1">
+                <div class="row align-items-center">
+                  <div class="col-2 d-none d-md-block">
+                    <img src="./img/login/g.png" width="30" alt="">
+                  </div>
+                  <div class="col-12 col-md-8 text-center">
+                    Google
+                  </div>
+                </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Inicio modal1-->
+    <div class="modal fade" id="modalMail" aria-hidden="true" aria-labelledby="modalMailLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="display-8 text-center fw-normal" class="modal-title" id="modalMailLabel">Por favor, informe su
+              mail
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form class="row g-3" id="form-mail">
+              <div class="input-group">
+
+                <input value="" type="mail" id="mail" name="mail" class="form-control" minlength="6" maxlength="45"
+                  placeholder="Ej: maria@mail.com" required>
+              </div>
+          </div>
+          <button type="submit" class="btn btn-secondary mx-3 my-3 p-2">Confirmar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!--Fin modal1-->
+
+    <!--Inicio modal2-->
+    <div class="modal fade" id="modalConfirmacion" aria-hidden="true" aria-labelledby="modalConfirmacionLabel2"
+      tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h6 class="modal-title" id="modalConfirmacionLabel2">REGISTRAR UNA NUEVA CONTRASEÑA</h6>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <h6> <span class="badge alert-secondary"> Le envíaremos una clave de seguridad a su correo
+                electrónico</span></h6>
+
+            <form>
+              <div class="mb-3">
+                <label for="password" class="display-9 text-start fw-bold" class="form-label">Nueva contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Ingrese una contraseña segura"
+                  minlength="6" maxlength="30" required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="display-9 text-start fw-bold" class="form-label">Confirmar nueva
+                  contraseña</label>
+                <input type="password" class="form-control" id="password" placeholder="Repita contraseña" minlength="6"
+                  maxlength="30" required>
+              </div>
+              <div id="passwordHelpBlock" class="form-text">
+                La contraseña debe tener minimo de 6 carácteres y maximo 30.
+              </div>
+
+              <button type="submit" style="float: right;" class="btn btn-secondary mx-2 my-2">Registrar una nueva
+                contraseña</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Fin modal2-->
+
+    <!--Inicio modal3-->
+    <div class="modal fade" id="modaregitro" aria-hidden="true" aria-labelledby="modalMailLabel" tabindex="-1">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="display-8 text-center fw-normal" class="modal-title my-modal" id="modalMailLabel">Registrarte
+              Es rápido y fácil.
+            </h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body ">
+            <form class="row g-3" id="form-mail">
+              <div class="input-group">
+
+                <div class="col-sm-10">
+                  <h5 class="display-8 text-left fw-normal" class="modal-title" id="modalMailLabel">Nombre</h5>
+                  <input value="" type="text" id="name" name="" class="form-control" minlength="2" maxlength="30"
+                    placeholder="Ej: Jose" required>
+                </div>
+
+                <div class="col-sm-10">
+                  <h5 class="display-8 text-left fw-normal" class="modal-title" id="modalMailLabel">Mail</h5>
+
+                  <input value="" type="mail" id="mail" name="" class="form-control" minlength="6" maxlength="45"
+                    placeholder="Ej: maria@mail.com" required>
+                </div>
+
+                <div class="col-sm-10">
+                  <h5 class="display-8 text-left fw-normal" class="modal-title" id="modalMailLabel">Edad</h5>
+
+                  <input value="" type="number" id="age" name="" class="form-control" required placeholder="Ej: edad"
+                    required>
+                </div>
+
+                <div class="col-sm-10">
+                  <label><input type="checkbox" id="cbox1" value="first_checkbox" required> Aceptar términos y
+                    condiciones.</label><br>
+                </div>
+                <div class="col-sm-10">
+                  <input type="checkbox" id="cbox2" value="second_checkbox"> <label for="cbox2">Aceptar recibir
+                    novedades por mail.</label>
+                </div>
+
+              </div>
+          </div>
+          <button type="submit" class="btn btn-secondary mx-3 my-3 p-2">Confirmar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!--Fin modal3-->
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+      crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+
+    <script>
+      $(document).ready(function () {
+        $('#form-mail').on('submit', function (e) {
+          $('#modalMail').modal('hide');
+          $('#modaregitro').modal('hide');
+          $('#modalConfirmacion').modal('show');
+          e.preventDefault();
+        });
+      });
+    </script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+      crossorigin="anonymous"></script>
+</body>
+
+</html>
